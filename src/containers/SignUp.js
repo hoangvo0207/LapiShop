@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
@@ -115,10 +116,9 @@ export default function SignUp(props) {
 
         <Grid container justify="flex-end" className={classes.containerGrid}>
           <Grid item>
-            {"Already have an account? "}
-            {/* <Link href="#" variant="body2"> */}
-            Sign in
-            {/* </Link> */}
+            <Link to="/signin" variant="body2">
+            Already have an account? Sign in
+            </Link>
           </Grid>
         </Grid>
       </div>
