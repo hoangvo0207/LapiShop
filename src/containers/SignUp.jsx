@@ -1,15 +1,16 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import ErrorIcon from "@material-ui/icons/Error";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-
-import Input from "../components/UI_Kits/Input";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import ButtonSubmit from "../components/UI_Kits/ButtonSubmit";
+import Input from "../components/UI_Kits/Input";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -26,13 +27,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignIn(props) {
+export default function SignUp(props) {
   const classes = useStyles();
   const [checkConfirmPassword, setCheckConfirmPassword] = useState(false);
 
   const [values, setValues] = useState({
     password: "",
+    confirmPassword: "",
     showPassword: false,
+    checkConfirmPassword: false,
   });
 
   const handleChange = (event) => {
@@ -43,6 +46,10 @@ export default function SignIn(props) {
       ...values,
       [name]: value,
     });
+
+    if (name === "confirmPassword") {
+      setCheckConfirmPassword(value === values.password);
+    }
   };
 
   const handleClickShowPassword = () => {
@@ -53,7 +60,7 @@ export default function SignIn(props) {
     <Container component="main" maxWidth="xs">
       <div className={classes.paper}>
         <Typography component="h1" variant="h5" className={classes.typography}>
-          Sign in
+          Sign up
         </Typography>
         <Grid container spacing={2} className={classes.containerGrid}>
           <Grid item xs={12}>
@@ -80,24 +87,39 @@ export default function SignIn(props) {
               </IconButton>
             </Input>
           </Grid>
-
           <Grid item xs={12}>
-            <ButtonSubmit name="Sign In" disabled={!(values.email && values.password)} />
+            <Input
+              name="confirmPassword"
+              type="password"
+              value={values.confirmPassword}
+              onChange={handleChange}
+              label="Confirm Password"
+              error={
+                values.confirmPassword === "" ? null : !checkConfirmPassword
+              }
+            >
+              <IconButton>
+                {values.confirmPassword ===
+                "" ? null : !checkConfirmPassword ? (
+                  <ErrorIcon color="error" />
+                ) : (
+                  <CheckCircleIcon color="primary" />
+                )}
+              </IconButton>
+            </Input>
+          </Grid>
+          <Grid item xs={12}>
+            <ButtonSubmit name="Sign Up" disabled={true} />
           </Grid>
         </Grid>
 
-        <Grid container>
-            <Grid item xs>
-              <Link to="/forgot-password" variant="body2">
-                Forgot password?
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link to="/signup" variant="body2">
-                Don't have an account? Sign Up
-              </Link>
-            </Grid>
+        <Grid container justify="flex-end" className={classes.containerGrid}>
+          <Grid item>
+            <Link to="/SignIn" variant="body2">
+              Already have an account? Sign in
+            </Link>
           </Grid>
+        </Grid>
       </div>
     </Container>
   );
