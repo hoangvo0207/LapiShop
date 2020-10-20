@@ -1,20 +1,14 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
-
-// import Home from "../pages/Home/index";
-import SignUp from "../containers/SignUp";
+import { Route, Switch } from "react-router-dom";
 import SignIn from "../containers/SignIn";
-// import ForgotPassword from "../pages/ForgotPassword/index";
+import SignUp from "../containers/SignUp";
 
-import { PrivateRoute } from "./PrivateRoute";
 
 export default function () {
   return (
     <Switch>
-      {/* <Route exact path="/forgot-password" component={ForgotPassword} /> */}
-      <Route exact path="/signup" component={SignUp} />
-      <Route exact path="/signin" component={SignIn} />
-      {/* <PrivateRoute exact path="/" component={Home} /> */}
+      <Route exact path="/SignUp" component={SignUp} />
+      <Route exact path="/SignIn" component={SignIn} />
     </Switch>
   );
 }
