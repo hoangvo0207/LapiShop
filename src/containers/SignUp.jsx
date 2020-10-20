@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     boxShadow: "0 2px 10px 2px #ececec",
     padding: theme.spacing(0, 8, 0, 8),
-    backgroundColor: "#f0f5f9",
+    backgroundColor: "#fff",
     height: "100vh"
   },
   typography: {
