@@ -9,9 +9,9 @@ import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import React, { useState } from "react";
 import { Link } from '@material-ui/core';
-import Banner from "../components/UI_Kits/Banner";
-import ButtonSubmit from "../components/UI_Kits/ButtonSubmit";
-import Logo from "../components/UI_Kits/Logo";
+import Banner from "../components/UI_Kits/Banner.jsx";
+import ButtonSubmit from "../components/UI_Kits/ButtonSubmit.jsx";
+import Logo from "../components/UI_Kits/Logo.jsx";
 
 const useStyles = makeStyles((theme) => ({
   root: {
