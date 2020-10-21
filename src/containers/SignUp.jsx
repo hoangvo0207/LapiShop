@@ -9,22 +9,36 @@ import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import ButtonSubmit from "../components/UI_Kits/ButtonSubmit";
-import Input from "../components/UI_Kits/Input";
+import ButtonSubmit from "../components/UI_Kits/ButtonSubmit.jsx";
+import Input from "../components/UI_Kits/Input.jsx";
+import EmailIcon from '@material-ui/icons/Email';
+import LockIcon from '@material-ui/icons/Lock';
+import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
+import Logo from '../components/UI_Kits/Logo.jsx';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    marginTop: theme.spacing(8),
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    justifyContent: "center",
+    boxShadow: "0 2px 10px 2px #ececec",
+    padding: theme.spacing(0, 8, 0, 8),
+    backgroundColor: "#fff",
+    height: "100vh"
   },
   typography: {
     margin: theme.spacing(3),
+    textAlign: "center",
+    fontWeight: "600",
+    color: "#8e8e8e"
   },
   containerGrid: {
-    margin: theme.spacing(0, 0, 2, 0),
+    margin: theme.spacing(0, 0, 4, 0),
   },
+  link: {
+    color: "#3578b7",
+  }
 }));
 
 export default function SignUp(props) {
@@ -57,10 +71,11 @@ export default function SignUp(props) {
   };
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component="main" maxWidth="sm">
       <div className={classes.paper}>
+        <Logo />
         <Typography component="h1" variant="h5" className={classes.typography}>
-          Sign up
+          Tạo tài khoản ngay, mua sắm liền tay
         </Typography>
         <Grid container spacing={2} className={classes.containerGrid}>
           <Grid item xs={12}>
@@ -71,6 +86,7 @@ export default function SignUp(props) {
               onChange={handleChange}
               label="Email"
               error={null}
+              startAdornment={<EmailIcon color="primary"/>}
             />
           </Grid>
           <Grid item xs={12}>
@@ -81,11 +97,13 @@ export default function SignUp(props) {
               onChange={handleChange}
               label="Password"
               error={null}
-            >
-              <IconButton onClick={handleClickShowPassword}>
-                {values.showPassword ? <Visibility /> : <VisibilityOff />}
-              </IconButton>
-            </Input>
+              startAdornment={<LockIcon color="primary"/>}
+              endAdornment={
+                <IconButton onClick={handleClickShowPassword}>
+                  {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                </IconButton>
+              }
+            ></Input>
           </Grid>
           <Grid item xs={12}>
             <Input
@@ -97,30 +115,40 @@ export default function SignUp(props) {
               error={
                 values.confirmPassword === "" ? null : !checkConfirmPassword
               }
-            >
-              <IconButton>
-                {values.confirmPassword ===
-                "" ? null : !checkConfirmPassword ? (
+              startAdornment={<ConfirmationNumberIcon color="primary"/>}
+              endAdornment={
+                values.confirmPassword === "" ? null : !checkConfirmPassword ? (
                   <ErrorIcon color="error" />
                 ) : (
                   <CheckCircleIcon color="primary" />
-                )}
-              </IconButton>
-            </Input>
+                )
+              }
+            ></Input>
           </Grid>
           <Grid item xs={12}>
-            <ButtonSubmit name="Sign Up" disabled={true} />
+            <ButtonSubmit
+              name="Sign Up"
+              disabled={
+                !(
+                  values.email !== "" &&
+                  values.password !== "" &&
+                  values.confirmPassword !== "" &&
+                  checkConfirmPassword
+                )
+              }
+            />
           </Grid>
         </Grid>
 
-        <Grid container justify="flex-end" className={classes.containerGrid}>
+        <Grid container justify="center" className={classes.containerGrid}>
           <Grid item>
-            <Link to="/SignIn" variant="body2">
+            <Link to="/SignIn" className={classes.link}>
               Already have an account? Sign in
             </Link>
           </Grid>
         </Grid>
       </div>
     </Container>
+
   );
 }
