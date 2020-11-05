@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
@@ -7,11 +9,11 @@ import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-import React, { useState } from "react";
 import { Link } from '@material-ui/core';
-import Banner from "../components/UI_Kits/Banner.jsx";
-import ButtonSubmit from "../components/UI_Kits/ButtonSubmit.jsx";
-import Logo from "../components/UI_Kits/Logo.jsx";
+
+import Banner from "../UI_Kits/Banner"
+import ButtonSubmit from "../UI_Kits/ButtonSubmit.jsx";
+import Logo from "../UI_Kits/Logo.jsx";
 
 const useStyles = makeStyles((theme) => ({
   root: {

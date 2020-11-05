@@ -1,3 +1,6 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
@@ -7,14 +10,13 @@ import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import ErrorIcon from "@material-ui/icons/Error";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import ButtonSubmit from "../components/UI_Kits/ButtonSubmit.jsx";
-import Input from "../components/UI_Kits/Input.jsx";
 import EmailIcon from '@material-ui/icons/Email';
 import LockIcon from '@material-ui/icons/Lock';
 import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
-import Logo from '../components/UI_Kits/Logo.jsx';
+
+import ButtonSubmit from "../UI_Kits/ButtonSubmit.jsx";
+import Input from "../UI_Kits/Input.jsx";
+import Logo from '../UI_Kits/Logo';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
