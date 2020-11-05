@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     width: "100%",
     minHeight: theme.spacing(5),
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(1),
   },
 }));
 
