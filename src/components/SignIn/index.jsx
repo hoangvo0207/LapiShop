@@ -12,8 +12,8 @@ import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import { Link } from '@material-ui/core';
 
 import Banner from "../UI_Kits/Banner"
-import ButtonSubmit from "../UI_Kits/ButtonSubmit.jsx";
-import Logo from "../UI_Kits/Logo.jsx";
+import ButtonSubmit from "../UI_Kits/ButtonSubmit";
+import Logo from "../UI_Kits/Logo";
 
 const useStyles = makeStyles((theme) => ({
   root: {
