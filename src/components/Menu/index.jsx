@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function DisabledTabs() {
   const classes = useStyles();
-  const labels = ["Item1", "Item2", "Item3"];
+  const labels = ["Trang chủ ", "Tất cả sản phẩm", "Áo", "Quần"];
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {

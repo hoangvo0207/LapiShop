@@ -1,14 +1,16 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import SignIn from "../containers/SignIn.jsx";
-import SignUp from "../containers/SignUp.jsx";
+import SignIn from "../pages/SignIn.jsx";
+import SignUp from "../pages/SignUp.jsx";
+import HomePage from "../pages/HomePage";
 
 
 export default function () {
   return (
     <Switch>
-      <Route exact path="/SignUp" component={SignUp} />
-      <Route exact path="/SignIn" component={SignIn} />
+      <Route path="/SignUp" component={SignUp} />
+      <Route path="/SignIn" component={SignIn} />
+      <Route exact path="/" component={HomePage} />
     </Switch>
   );
 }
