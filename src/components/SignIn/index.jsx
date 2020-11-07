@@ -1,4 +1,5 @@
-import { Link } from "@material-ui/core";
+import React, { useState } from "react";
+
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
@@ -8,11 +9,11 @@ import EmailIcon from "@material-ui/icons/Email";
 import LockIcon from "@material-ui/icons/Lock";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-import React, { useState } from "react";
-import Banner from "../components/UI_Kits/Banner.jsx";
-import ButtonSubmit from "../components/UI_Kits/ButtonSubmit.jsx";
-import Input from "../components/UI_Kits/Input.jsx";
-import Logo from "../components/UI_Kits/Logo.jsx";
+
+import Banner from "../UI_Kits/Banner"
+import ButtonSubmit from "../UI_Kits/ButtonSubmit.jsx";
+import Logo from "../UI_Kits/Logo.jsx";
+import Input from "../UI_Kits/Input.jsx";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -65,7 +66,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function SignIn(props) {
   const classes = useStyles();
-  const [checkConfirmPassword, setCheckConfirmPassword] = useState(false);
 
   const [values, setValues] = useState({
     password: "",

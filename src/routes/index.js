@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import SignIn from "../containers/SignIn.jsx";
-import SignUp from "../containers/SignUp.jsx";
+import SignIn from "../pages/SignIn.jsx";
+import SignUp from "../pages/SignUp.jsx";
 
 
 export default function () {

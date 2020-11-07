@@ -23,6 +23,7 @@ const Banner = () => {
       <img
         className={classes.pic}
         src="https://images.unsplash.com/photo-1520693414807-45858f5a9188?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+        alt="Banner"
       />
     </Grid>
   );
