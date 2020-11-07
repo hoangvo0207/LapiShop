@@ -13,19 +13,12 @@ import ErrorIcon from "@material-ui/icons/Error";
 import LockIcon from "@material-ui/icons/Lock";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-import EmailIcon from '@material-ui/icons/Email';
-import LockIcon from '@material-ui/icons/Lock';
-import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
 
 import ButtonSubmit from "../UI_Kits/ButtonSubmit";
 import Input from "../UI_Kits/Input";
 import Logo from '../UI_Kits/Logo';
 
-import React, { useState } from "react";
-import Banner from "../components/UI_Kits/Banner.jsx";
-import ButtonSubmit from "../components/UI_Kits/ButtonSubmit.jsx";
-import Input from "../components/UI_Kits/Input.jsx";
-import Logo from "../components/UI_Kits/Logo.jsx";
+import Banner from "../UI_Kits/Banner.jsx";
 
 
 const useStyles = makeStyles(theme => ({
