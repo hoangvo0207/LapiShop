@@ -63,7 +63,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignIn(props) {
   const classes = useStyles();
-  const [checkConfirmPassword, setCheckConfirmPassword] = useState(false);
 
   const [values, setValues] = useState({
     password: "",
