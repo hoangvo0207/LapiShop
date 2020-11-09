@@ -21,15 +21,13 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     transition: "all 2s",
-    height: 300,
+    height: 250,
     backgroundSize: "120%",
+
     "&:hover": {
       backgroundSize: "150%",
     },
-    "&:hover:after": {
-      display: "grid",
-      placeItems: "center",
-    },
+
     "&:after": {
       display: "none",
       content: '""',
@@ -40,6 +38,11 @@ const useStyles = makeStyles((theme) => ({
       bottom: 0,
       left: 0,
       right: 0,
+    },
+    
+    "&:hover:after": {
+      display: "grid",
+      placeItems: "center",
     },
   },
   typography: {
