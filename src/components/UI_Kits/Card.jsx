@@ -42,13 +42,11 @@ export default function MediaCard(props) {
           <Typography gutterBottom variant="h6" component="h2" noWrap={true}>
             {name}
           </Typography>
+          <Typography gutterBottom variant="h6" component="h2" noWrap={true}>
+            18.000d
+          </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions className={classes.action}>
-        <Button className={classes.button} color="primary">
-          Add to cart
-        </Button>
-      </CardActions>
     </Card>
   );
 }
