@@ -20,11 +20,12 @@ const useStyles = makeStyles((theme) => ({
     border: "none",
   },
   media: {
-    transition: "all 2s",
+    transition: "all .7s",
     height: 250,
     backgroundSize: "120%",
 
     "&:hover": {
+      cursor: 'pointer',
       backgroundSize: "150%",
     },
 
@@ -39,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
       left: 0,
       right: 0,
     },
-    
+
     "&:hover:after": {
       display: "grid",
       placeItems: "center",
