@@ -15,7 +15,7 @@ CategoryItem.defaultProps = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 250,
+    width: 250,
     position: "relative",
     border: "none",
   },
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
       content: '""',
       position: "absolute",
       zIndex: "99",
-      backgroundColor: "#88888840",
+      backgroundColor: "#88888860",
       top: 0,
       bottom: 0,
       left: 0,
@@ -55,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "uppercase",
     fontWeight: "bold",
     fontSize: "24px",
+    zIndex: "100",
   },
 }));
 

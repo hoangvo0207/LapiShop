@@ -1,7 +1,7 @@
 import React from "react";
 import Menu from "../Menu";
 import Card from "../UI_Kits/Card";
-import CategoryItem from "./Category/CategoryItem";
+import Category from "./Category";
 
 export default function HomePage() {
   return (
@@ -11,9 +11,22 @@ export default function HomePage() {
         image="https://cf.shopee.vn/file/228542d03f01ddbf605910a351d7695f"
         name="Hoodie đẹp lắm nè mọi người ơi"
       />
-      <CategoryItem
-        image="https://cf.shopee.vn/file/228542d03f01ddbf605910a351d7695f"
-        title="Hoodie"
+      <Category
+        categoryArray={[
+          {
+            image: "https://cf.shopee.vn/file/228542d03f01ddbf605910a351d7695f",
+            title: "Hoodie",
+          },
+          {
+            title: "Pull",
+          },
+          {
+            title: "Pull",
+          },
+          {
+            title: "Pull",
+          },
+        ]}
       />
     </div>
   );
