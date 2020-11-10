@@ -1,10 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    alignItems: 'center',
     width: '16%',
     margin: "2%",
     flexDirection: 'column',
@@ -27,10 +27,6 @@ function SetLayoutOfItem(props) {
       { children }
     </div>
   )
-}
-
-SetLayoutOfItem.propTypes = {
-
 }
 
 export default SetLayoutOfItem
