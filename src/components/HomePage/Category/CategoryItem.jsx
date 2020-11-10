@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import { CardMedia, Card, Typography } from "@material-ui/core";
+import ImageMedia from "../../UI_Kits/ImageWithMask";
 
 CategoryItem.propTypes = {
   image: PropTypes.string,
@@ -15,35 +16,22 @@ CategoryItem.defaultProps = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 250,
     position: "relative",
-    border: "none",
-  },
-  media: {
-    transition: "all .7s",
-    height: 250,
-    backgroundSize: "120%",
-
-    "&:hover": {
-      cursor: 'pointer',
-      backgroundSize: "150%",
+    background: "firebrick",
+    width: "12.6%",
+    margin: "2%",
+    "&:before": {
+      content: '" "',
+      float: "left",
+      paddingTop: "100%",
     },
-
-    "&:after": {
-      display: "none",
-      content: '""',
-      position: "absolute",
-      zIndex: "99",
-      backgroundColor: "#88888860",
-      top: 0,
-      bottom: 0,
-      left: 0,
-      right: 0,
+    ["@media (max-width: 768px)"]: {
+      width: "29.3%",
+      background: "red",
     },
-
-    "&:hover:after": {
-      display: "grid",
-      placeItems: "center",
+    ["@media (max-width: 425px)"]: {
+      width: "46%",
+      background: "yellow",
     },
   },
   typography: {
@@ -65,12 +53,8 @@ function CategoryItem(props) {
   const { image, title } = props;
 
   return (
-    <Card hover className={classes.root}>
-      <CardMedia
-          className={classes.media}
-          image={image}
-          title={title}
-        />
+    <div className={classes.root}>
+      <ImageMedia image={image} title={title} />
       <Typography
         className={classes.typography}
         gutterBottom
@@ -80,7 +64,7 @@ function CategoryItem(props) {
       >
         {title}
       </Typography>
-    </Card>
+    </div>
   );
 }
 
