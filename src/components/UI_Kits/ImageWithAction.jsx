@@ -9,7 +9,7 @@ ImageWithAction.propTypes = {
 const useStyles = makeStyles((theme) => ({
   media: {
     transition: "all .7s",
-    height: 250,
+    height: "100%",
     backgroundSize: "120%",
     position: "relative",
 

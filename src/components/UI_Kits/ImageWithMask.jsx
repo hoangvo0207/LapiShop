@@ -1,23 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { CardMedia, makeStyles } from '@material-ui/core'
+import React from "react";
+import PropTypes from "prop-types";
+import { CardMedia, makeStyles } from "@material-ui/core";
 
-ImageWithMask.propTypes = {
-
-}
+ImageWithMask.propTypes = {};
 
 const useStyles = makeStyles((theme) => ({
   media: {
     transition: "all .7s",
-    height: '100%',
+    height: "100%",
     backgroundSize: "120%",
     position: "relative",
     
     "&:hover": {
-      cursor: 'pointer',
+      cursor: "pointer",
       backgroundSize: "150%",
     },
-
     "&:after": {
       display: "none",
       content: '" "',
@@ -29,25 +26,17 @@ const useStyles = makeStyles((theme) => ({
       left: 0,
       right: 0,
     },
-
     "&:hover:after": {
       display: "grid",
       placeItems: "center",
     },
-  }
+  },
 }));
 
 function ImageWithMask(props) {
   const classes = useStyles();
-  const {image, title} = props;
-  return (
-    <CardMedia
-      className={classes.media}
-      image={image}
-      title={title}
-    />
-  )
+  const { image, title } = props;
+  return <CardMedia className={classes.media} image={image} title={title} />;
 }
 
-export default ImageWithMask
-
+export default ImageWithMask;

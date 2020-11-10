@@ -9,7 +9,6 @@ const useStyles = makeStyles((theme) => ({
   grid: {
     display: 'flex',
     flexWrap: 'wrap',
-    
   },  
 }));
 

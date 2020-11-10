@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import { CardMedia, Card, Typography } from "@material-ui/core";
 import ImageMedia from "../../UI_Kits/ImageWithMask";
+import ImageProduct from "../../UI_Kits/ImageProduct";
+import SetLayoutOfItem from "../../UI_Kits/SetLayoutOfItem";
 
 CategoryItem.propTypes = {
   image: PropTypes.string,
@@ -15,25 +17,6 @@ CategoryItem.defaultProps = {
 };
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    position: "relative",
-    background: "firebrick",
-    width: "12.6%",
-    margin: "2%",
-    "&:before": {
-      content: '" "',
-      float: "left",
-      paddingTop: "100%",
-    },
-    ["@media (max-width: 768px)"]: {
-      width: "29.3%",
-      background: "red",
-    },
-    ["@media (max-width: 425px)"]: {
-      width: "46%",
-      background: "yellow",
-    },
-  },
   typography: {
     position: "absolute",
     top: "50%",
@@ -53,8 +36,10 @@ function CategoryItem(props) {
   const { image, title } = props;
 
   return (
-    <div className={classes.root}>
-      <ImageMedia image={image} title={title} />
+    <SetLayoutOfItem>
+      <ImageProduct>
+        <ImageMedia image={image} title={title} />
+      </ImageProduct>
       <Typography
         className={classes.typography}
         gutterBottom
@@ -64,7 +49,7 @@ function CategoryItem(props) {
       >
         {title}
       </Typography>
-    </div>
+    </SetLayoutOfItem>
   );
 }
 

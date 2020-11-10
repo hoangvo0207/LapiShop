@@ -2,31 +2,28 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import ImageWithAction from "./ImageWithAction";
+import ImageProduct from "./ImageProduct";
+import SetLayoutOfItem from "./SetLayoutOfItem";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    maxWidth: 250,
-    textAlign: "center",
-    cursor: "pointer",
-  },
-  // media: {
-  //   height: 250,
-  // },
   typographyWeight: {
+    position: "relative",
     fontWeight: "bold",
     "&:hover": {
-      color: '#79858C',
-    }
+      color: "#79858C",
+    },
   },
 }));
 
 export default function MediaCard(props) {
   const classes = useStyles();
-  const { image, name } = props;
+  const { image, name, price } = props;
 
   return (
-    <div className={classes.root}>
-      <ImageWithAction image={image} title={name} />
+    <SetLayoutOfItem>
+      <ImageProduct>
+        <ImageWithAction image={image} title={name} />
+      </ImageProduct>
       <Typography
         className={classes.typographyWeight}
         variant="h6"
@@ -35,9 +32,9 @@ export default function MediaCard(props) {
       >
         {name}
       </Typography>
-      <Typography variant="h6" component="h2" >
-        18.000₫
+      <Typography variant="h6" component="h2">
+        {price}
       </Typography>
-    </div>
+    </SetLayoutOfItem>
   );
 }
