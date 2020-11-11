@@ -3,7 +3,13 @@ import PropTypes from 'prop-types'
 import { CardMedia, makeStyles } from '@material-ui/core'
 
 ImageWithAction.propTypes = {
+  image: PropTypes.string,
+  title: PropTypes.string
+}
 
+ImageWithAction.defaultProps = {
+  image: "https://picsum.photos/600",
+  title: "",
 }
 
 const useStyles = makeStyles((theme) => ({

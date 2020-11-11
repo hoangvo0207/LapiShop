@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import { CardMedia, Card, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import ImageMedia from "../../UI_Kits/ImageWithMask";
 import ImageProduct from "../../UI_Kits/ImageProduct";
 import SetLayoutOfItem from "../../UI_Kits/SetLayoutOfItem";

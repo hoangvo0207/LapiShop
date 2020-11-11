@@ -3,7 +3,13 @@ import PropTypes from "prop-types";
 import CategoryItem from "./CategoryItem";
 import { makeStyles } from "@material-ui/core";
 
-Category.propTypes = {};
+Category.propTypes = {
+  categoryArray: PropTypes.array
+};
+
+Category.defaultProps = {
+  categoryArray: []
+}
 
 const useStyles = makeStyles((theme) => ({
   grid: {

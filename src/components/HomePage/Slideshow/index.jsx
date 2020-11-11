@@ -1,9 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-Slideshow.propTypes = {
 
+Slideshow.propTypes = {
+  listImage: PropTypes.array
 }
 
+Slideshow.defaultProps = {
+  listImage: []
+}
 
 function Slideshow(props) {
   return (

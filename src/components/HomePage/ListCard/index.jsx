@@ -13,20 +13,23 @@ const useStyles = makeStyles((theme) => ({
 
 function ListCard(props) {
   const classes = useStyles();
-  const { listBestSale } = props;
+  const { listProducts } = props;
 
   return (
     <div className={classes.grid}>
-      {listBestSale.map((item) => <Card
-        image={item.image}
-        name={item.name}
-        price={item.price}
-      />)}
-      
+      {listProducts?.map((item) => {
+        return <Card image={item.image} name={item.name} price={item.price} />;
+      })}
     </div>
   );
 }
 
-ListCard.propTypes = {};
+ListCard.propTypes = {
+  listProducts: PropTypes.array
+};
+
+ListCard.defaultProps = {
+  listProducts: []
+};
 
 export default ListCard;

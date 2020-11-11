@@ -2,7 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import { CardMedia, makeStyles } from "@material-ui/core";
 
-ImageWithMask.propTypes = {};
+ImageWithMask.propTypes = {
+  image: PropTypes.string,
+  title: PropTypes.string
+}
+
+ImageWithMask.defaultProps = {
+  image: "https://picsum.photos/600",
+  title: "",
+}
 
 const useStyles = makeStyles((theme) => ({
   media: {
