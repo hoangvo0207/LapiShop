@@ -3,7 +3,9 @@ import React from "react";
 import Menu from "../Menu";
 import Category from "./Category";
 import Slideshow from "./Slideshow";
-import ListCard from "./ListCard";
+
+import ListNewArrivals from "./ListNewArrivals";
+import ListCard from "../UI_Kits/ListCard";
 
 export default function HomePage() {
   return (
@@ -13,7 +15,7 @@ export default function HomePage() {
         slideImages={[
           "https://cf.shopee.vn/file/9092080633f0f01912e06a8e505ecd51",
           "https://cf.shopee.vn/file/29c2c58832f47894ce09a0bbf0b2d005",
-          "https://picsum.photos/800"
+          "https://picsum.photos/800",
         ]}
       />
       <Category
@@ -37,9 +39,7 @@ export default function HomePage() {
           },
         ]}
       />
-      NEW ARRIVALS <br />
-      CÁC MẪU MỚI VỀ - CHẤT HƠN NƯỚC CẤT
-      <ListCard
+      <ListNewArrivals
         listProducts={[
           {
             image: "https://cf.shopee.vn/file/228542d03f01ddbf605910a351d7695f",
@@ -93,24 +93,24 @@ export default function HomePage() {
           {
             image: "https://cf.shopee.vn/file/228542d03f01ddbf605910a351d7695f",
             name: "Hoodie",
-            price: "18.000₫"
+            price: "18.000₫",
           },
           {
             name: "Pull",
-            price: "30.000₫"
+            price: "30.000₫",
           },
           {
             name: "Pull",
-            price: "40.000₫"
+            price: "40.000₫",
           },
           {
             image: "https://cf.shopee.vn/file/228542d03f01ddbf605910a351d7695f",
             name: "Hoodie",
-            price: "150.000₫"
+            price: "150.000₫",
           },
           {
             name: "Pull",
-            price: "70.000₫"
+            price: "70.000₫",
           },
         ]}
       />

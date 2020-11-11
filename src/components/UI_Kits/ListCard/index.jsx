@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { makeStyles } from "@material-ui/core";
 
-import Card from "../../UI_Kits/Card";
+import Card from "../Card";
 
 const useStyles = makeStyles((theme) => ({
   grid: {
@@ -18,8 +18,8 @@ function ListCard(props) {
 
   return (
     <div className={classes.grid}>
-      {listProducts?.map((item) => {
-        return <Card image={item.image} name={item.name} price={item.price} />;
+      {listProducts?.map((item, index) => {
+        return <Card key={index} image={item.image} name={item.name} price={item.price} />;
       })}
     </div>
   );
