@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import CategoryItem from "./CategoryItem";
+
 import { makeStyles } from "@material-ui/core";
+
+import CategoryItem from "./CategoryItem";
 
 Category.propTypes = {
   categoryArray: PropTypes.array
