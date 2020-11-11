@@ -14,6 +14,12 @@ function ListNewArrivals(props) {
   );
 }
 
-ListNewArrivals.propTypes = {};
+ListNewArrivals.propTypes = {
+  listProducts: PropTypes.array
+};
+
+ListNewArrivals.defaultProps = {
+  listProducts: []
+};
 
 export default ListNewArrivals;
