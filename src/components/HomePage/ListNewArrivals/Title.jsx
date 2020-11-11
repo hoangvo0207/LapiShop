@@ -4,7 +4,7 @@ import { Grid, Typography, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
-    margin: "10px 0",
+    padding: "10px 2%"
   },
   titleTypography: {
     fontWeight: "700",
