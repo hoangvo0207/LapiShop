@@ -15,7 +15,7 @@ CategoryItem.propTypes = {
 
 CategoryItem.defaultProps = {
   image: "https://picsum.photos/600",
-  title: "",
+  title: ""
 };
 
 const useStyles = makeStyles((theme) => ({
