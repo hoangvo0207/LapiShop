@@ -1,6 +1,3 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
@@ -13,13 +10,12 @@ import ErrorIcon from "@material-ui/icons/Error";
 import LockIcon from "@material-ui/icons/Lock";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Banner from "../UI_Kits/Banner.jsx";
 import ButtonSubmit from "../UI_Kits/ButtonSubmit";
 import Input from "../UI_Kits/Input";
-import Logo from '../UI_Kits/Logo';
-
-import Banner from "../UI_Kits/Banner.jsx";
-
+import Logo from "../UI_Kits/Logo";
 
 const useStyles = makeStyles(theme => ({
   root: {
