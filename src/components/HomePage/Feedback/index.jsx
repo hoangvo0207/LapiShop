@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import PropTypes from "prop-types";
-import { Grid, Typography, Box } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 
 import Slideshow from "./Slideshow";
@@ -26,7 +26,7 @@ function Feedback(props) {
   const classes = useStyles();
   const { slideImages, slidesToShow, height } = props;
   return (
-    <Grid className={classes.background} container alignItems="center" >
+    <Grid className={classes.background} container alignItems="center">
       <Grid xs className={classes.title} item>
         <Title />
       </Grid>

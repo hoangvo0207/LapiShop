@@ -1,18 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Typography, Box, Grid } from "@material-ui/core";
-
+import { Grid } from "@material-ui/core";
+import Typography from "../../UI_Kits/Typography";
 function InforItem(props) {
   // eslint-disable-next-line react/prop-types
   const { icon, content } = props;
   return (
-    <Grid container alignItems="center">
+    <Grid container spacing={1} alignItems="center">
       <Grid item>{icon}</Grid>
       <Grid item>
-        <Typography component="div">
-          <Box fontSize={18} ml={1} lineHeight={2}>
-            {content}
-          </Box>
+        <Typography fontSize={18} lineHeight={2}>
+          {content}
         </Typography>
       </Grid>
     </Grid>

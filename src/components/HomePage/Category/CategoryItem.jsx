@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
 
 import ImageMedia from "../../UI_Kits/ImageWithMask";
 import ImageProduct from "../../UI_Kits/ImageProduct";
@@ -15,10 +14,10 @@ CategoryItem.propTypes = {
 
 CategoryItem.defaultProps = {
   image: "https://picsum.photos/600",
-  title: ""
+  title: "",
 };
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   typography: {
     position: "absolute",
     top: "50%",
@@ -42,15 +41,7 @@ function CategoryItem(props) {
       <ImageProduct>
         <ImageMedia image={image} title={title} />
       </ImageProduct>
-      <Typography
-        className={classes.typography}
-        gutterBottom
-        variant="h6"
-        component="h2"
-        noWrap={true}
-      >
-        {title}
-      </Typography>
+      <div className={classes.typography}>{title}</div>
     </SetLayoutOfItem>
   );
 }

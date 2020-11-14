@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Typography, Box, Grid, makeStyles } from "@material-ui/core";
+import { Grid, makeStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
+
+import Typography from "../../UI_Kits/Typography";
 
 const useStyles = makeStyles(() => ({
   title: {
-    textTransform: "uppercase",
     color: "#7D7777",
   },
   uppercase: {
@@ -21,24 +22,23 @@ function Title(props) {
   return (
     <Grid container alignItems="center" justify="center">
       <Grid item>
-        <Typography component="div">
-          <Box className={classes.title} fontSize={18}>
-            Feedbacks
-          </Box>
-          <Box
-            className={classes.uppercase}
-            fontSize={26}
-            fontWeight={900}
-            lineHeight={2}
-          >
-            Khách hàng
-          </Box>
-          <Box className={classes.changeColor} fontSize={18}>
-            Hình ảnh khách hàng với thời trang Nocturnal menswear
-          </Box>
-          <Box className={classes.uppercase} fontSize={16} lineHeight={4}>
-            <Link style={{ color: "#000000" }}>XEM THÊM</Link>
-          </Box>
+        <Typography fontSize={18} textTransform="uppercase">
+          Feedbacks
+        </Typography>
+        <Typography
+          fontSize={26}
+          fontWeight={900}
+          lineHeight={2}
+          textTransform="uppercase"
+        >
+          Khách hàng
+        </Typography>
+
+        <Typography fontSize={18}>
+          Hình ảnh khách hàng với thời trang Nocturnal menswear
+        </Typography>
+        <Typography className={classes.uppercase} fontSize={16} lineHeight={4}>
+          <Link style={{ color: "#000000" }}>XEM THÊM</Link>
         </Typography>
       </Grid>
     </Grid>

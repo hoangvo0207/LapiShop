@@ -1,23 +1,19 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles(() => ({
-  typography: {
-    fontSize: "40px",
-    fontWeight: 900,
-    textTransform: "uppercase",
-    textAlign: "center",
-    lineHeight: 3
-  },
-}));
+import Typography from "../../UI_Kits/Typography";
 
 function Title(props) {
-  const classes = useStyles();
 
-  return <div className={classes.typography}> Sản phẩm bán chạy </div>;
+  return (
+    <Typography
+      fontSize={40}
+      fontWeight={900}
+      textTransform="uppercase"
+      lineHeight={3}
+    >
+      Sản phẩm bán chạy
+    </Typography>
+  );
 }
-
-Title.propTypes = {};
 
 export default Title;

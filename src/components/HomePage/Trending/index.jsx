@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Grid, makeStyles, Box, Typography } from "@material-ui/core";
+import { Grid, makeStyles } from "@material-ui/core";
+
+import Typography from "../../UI_Kits/Typography";
 
 const useStyles = makeStyles(() => ({
   backgroundImage: {
@@ -26,8 +28,8 @@ const useStyles = makeStyles(() => ({
     padding: "15px 30px",
     fontSize: "18px",
     textTransform: "uppercase",
-    color: "#ffffff"
-  }
+    color: "#ffffff",
+  },
 }));
 
 function Trending(props) {
@@ -49,21 +51,24 @@ function Trending(props) {
           />
         </Grid>
         <Grid item className={classes.description}>
-          <Typography component="div">
-            <Box className={classes.uppercase} fontWeight={900} fontSize={24}>
-              #1 Trending
-            </Box>
-            <Box
-              className={classes.uppercase}
-              fontSize={70}
-              lineHeight={1}
-              fontWeight={900}
-            >
-              Longsleeve Shirt basic
-            </Box>
-            <Box fontSize={50} lineHeight={2}>
-              165.000₫
-            </Box>
+          <Typography
+            textTransform="uppercase"
+            fontWeight={700}
+            fontSize={24}
+            lineHeight={2}
+          >
+            #1 Trending
+          </Typography>
+          <Typography
+            textTransform="uppercase"
+            fontSize={65}
+            lineHeight={1}
+            fontWeight={900}
+          >
+            Longsleeve Shirt basic
+          </Typography>
+          <Typography fontSize={50} lineHeight={2}>
+            165.000₫
           </Typography>
           <button className={classes.button}>Mua ngay</button>
         </Grid>
