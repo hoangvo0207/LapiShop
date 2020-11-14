@@ -11,16 +11,14 @@ Slideshow.propTypes = {
 };
 
 Slideshow.defaultProps = {
-  slideImages: [],
+  slideImages: []
 };
 
 const useStyles = makeStyles(() => ({
   image: {
-    // backgroundSize: "cover",
-    // backgroundPosition: "center",
     height: "10vw",
-    margin: "0px 3px",
-  },
+    margin: "0px 3px"
+  }
 }));
 
 function Slideshow(props) {

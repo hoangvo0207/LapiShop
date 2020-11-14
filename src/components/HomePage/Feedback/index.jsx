@@ -8,13 +8,16 @@ import Slideshow from "./Slideshow";
 import Title from "./Title";
 
 const useStyles = makeStyles(() => ({
+  background: {
+    backgroundColor: "#FBFBFB",
+    padding: "2%"
+  },
   title: {
-    textAlign: "center",
+    textAlign: "center"
   },
   root: {
-    width: "70vw",
-    // flexGrow: "2",
-  },
+    width: "70vw"
+  }
 }));
 
 function Feedback(props) {
@@ -22,7 +25,12 @@ function Feedback(props) {
   const classes = useStyles();
   const { slideImages, slidesToShow, height } = props;
   return (
-    <Grid container alignItems="center" justify="space-between">
+    <Grid
+      className={classes.background}
+      container
+      alignItems="center"
+      justify="space-between"
+    >
       <Grid className={classes.title} item>
         <Title />
       </Grid>
