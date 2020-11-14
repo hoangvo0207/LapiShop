@@ -4,6 +4,10 @@ import { Typography, Box, Grid, makeStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
+  title: {
+    textTransform: "uppercase",
+    color: "#7D7777",
+  },
   uppercase: {
     textTransform: "uppercase",
   },
@@ -18,10 +22,7 @@ function Title(props) {
     <Grid container alignItems="center" justify="center">
       <Grid item>
         <Typography component="div">
-          <Box
-            className={classes.uppercase && classes.changeColor}
-            fontSize={18}
-          >
+          <Box className={classes.title} fontSize={18}>
             Feedbacks
           </Box>
           <Box

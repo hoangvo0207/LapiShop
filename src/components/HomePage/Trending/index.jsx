@@ -11,7 +11,7 @@ const useStyles = makeStyles(() => ({
     background: "#00000080",
   },
   image: {
-    width: "650px",
+    width: "50vw",
   },
   description: {
     maxWidth: "30vw",

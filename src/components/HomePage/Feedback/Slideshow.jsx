@@ -18,6 +18,9 @@ const useStyles = makeStyles(() => ({
   image: {
     height: "20vw",
     margin: "0px 3px",
+    ["@media (max-width: 768px)"]: {
+      height: "40vw",
+    },
   },
 }));
 
