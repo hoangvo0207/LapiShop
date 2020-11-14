@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
 function Title(props) {
   const classes = useStyles();
   return (
-    <Grid container alignItems="center">
+    <Grid container alignItems="center" justify="center">
       <Grid item>
         <Typography component="div">
           <Box
@@ -33,8 +33,7 @@ function Title(props) {
             Khách hàng
           </Box>
           <Box className={classes.changeColor} fontSize={18}>
-            Hình ảnh khách hàng với thời trang <br />
-            Nocturnal menswear <br />
+            Hình ảnh khách hàng với thời trang Nocturnal menswear
           </Box>
           <Box className={classes.uppercase} fontSize={16} lineHeight={4}>
             <Link style={{ color: "#000000" }}>XEM THÊM</Link>

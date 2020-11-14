@@ -10,13 +10,16 @@ import Title from "./Title";
 const useStyles = makeStyles(() => ({
   background: {
     backgroundColor: "#FBFBFB",
-    padding: "2%"
+    padding: "2%",
+    ["@media (max-width: 768px)"]: {
+      flexDirection: "column"
+    },
   },
   title: {
-    textAlign: "center"
+    textAlign: "center",
   },
-  root: {
-    width: "70vw"
+  slideshow: {
+    paddingBottom: "2%"
   }
 }));
 
@@ -25,16 +28,11 @@ function Feedback(props) {
   const classes = useStyles();
   const { slideImages, slidesToShow, height } = props;
   return (
-    <Grid
-      className={classes.background}
-      container
-      alignItems="center"
-      justify="space-between"
-    >
-      <Grid className={classes.title} item>
+    <Grid className={classes.background} container alignItems="center" >
+      <Grid xs className={classes.title} item>
         <Title />
       </Grid>
-      <Grid item className={classes.root}>
+      <Grid xs={9} item className={classes.slideshow}>
         <Slideshow slideImages={slideImages} />
       </Grid>
     </Grid>

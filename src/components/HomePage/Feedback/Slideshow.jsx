@@ -11,14 +11,14 @@ Slideshow.propTypes = {
 };
 
 Slideshow.defaultProps = {
-  slideImages: []
+  slideImages: [],
 };
 
 const useStyles = makeStyles(() => ({
   image: {
-    height: "10vw",
-    margin: "0px 3px"
-  }
+    height: "250px",
+    margin: "0px 3px",
+  },
 }));
 
 function Slideshow(props) {
@@ -31,9 +31,24 @@ function Slideshow(props) {
     autoplay: true,
     autoplaySpeed: 4000,
     speed: 2000,
-    slidesToShow: 4,
+    slidesToShow: 3,
     arrows: false,
     centerMode: true,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ],
   };
 
   return (
