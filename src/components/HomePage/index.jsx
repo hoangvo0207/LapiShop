@@ -8,6 +8,7 @@ import ListNewArrivals from "./ListNewArrivals";
 import ListCard from "../UI_Kits/ListCard";
 import Feedback from "./Feedback";
 import Footer from "../Footer";
+import Trending from "./Trending";
 
 export default function HomePage() {
   return (
@@ -89,6 +90,7 @@ export default function HomePage() {
           },
         ]}
       />
+      <Trending />
       SẢN PHẨM BÁN CHẠY
       <ListCard
         listProducts={[
