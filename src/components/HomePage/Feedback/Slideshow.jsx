@@ -16,10 +16,10 @@ Slideshow.defaultProps = {
 
 const useStyles = makeStyles(() => ({
   image: {
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    height: "40vw",
-    margin: "0px 20px",
+    // backgroundSize: "cover",
+    // backgroundPosition: "center",
+    height: "10vw",
+    margin: "0px 3px",
   },
 }));
 
@@ -31,11 +31,11 @@ function Slideshow(props) {
     dots: true,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 4000,
     speed: 2000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 4,
     arrows: false,
+    centerMode: true,
   };
 
   return (
@@ -43,10 +43,11 @@ function Slideshow(props) {
       {slideImages?.map((item, index) => {
         return (
           <div key={index}>
-            <div
+            {/* <div
               className={classes.image}
               style={{ backgroundImage: `url(${item})` }}
-            ></div>
+            ></div> */}
+            <img src={item} className={classes.image} />
           </div>
         );
       })}

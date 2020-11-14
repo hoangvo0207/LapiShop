@@ -1,34 +1,34 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Grid, Typography, makeStyles } from "@material-ui/core";
+import { Grid, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
-    padding: "10px 2%"
+    padding: "10px 2%",
+    textTransform: "uppercase"
   },
   titleTypography: {
-    fontWeight: "700",
-    textTransform: "uppercase",
-    fontSize: "54px",
+    fontWeight: "900",
+    fontSize: "44px",
     marginBottom: "15px",
   },
   description: {
     color: "#777777",
-    textTransform: "uppercase",
+    fontSize: "18px",
   },
   hotTypography: {
     fontWeight: "900",
     color: "#F2F2F2",
-    fontSize: "230px",
-    textTransform: "uppercase",
+    fontSize: "200px",
+    margin: "0"
   },
   ["@media (max-width: 768px)"]: {
     titleTypography: {
       fontSize: "28px",
-      marginBottom: "7px",
+      marginBottom: "5px",
     },
     description: {
-      fontSize: "18px",
+      fontSize: "14px",
     },
     hotTypography: {
       display: "none",
@@ -48,18 +48,14 @@ function Title(props) {
     >
       <Grid item>
         <span>
-          <Typography className={classes.titleTypography} variant="h3">
-            NEW ARRIVALS
-          </Typography>
-          <Typography className={classes.description} variant="h5">
+          <p className={classes.titleTypography}>NEW ARRIVALS</p>
+          <p className={classes.description}>
             Các mẫu mới về - chất hơn nước cất
-          </Typography>
+          </p>
         </span>
       </Grid>
       <Grid item>
-        <Typography className={classes.hotTypography} variant="h1">
-          Arrival
-        </Typography>
+        <p className={classes.hotTypography}>Arrival</p>
       </Grid>
     </Grid>
   );

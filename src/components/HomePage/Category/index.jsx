@@ -13,11 +13,11 @@ Category.defaultProps = {
   categoryArray: []
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   grid: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },  
+    display: "flex",
+    flexWrap: "wrap"
+  },
 }));
 
 function Category(props) {

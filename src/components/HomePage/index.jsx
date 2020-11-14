@@ -6,6 +6,8 @@ import Slideshow from "./Slideshow";
 
 import ListNewArrivals from "./ListNewArrivals";
 import ListCard from "../UI_Kits/ListCard";
+import Feedback from "./Feedback";
+import Footer from "../Footer";
 
 export default function HomePage() {
   return (
@@ -114,6 +116,20 @@ export default function HomePage() {
           },
         ]}
       />
+      <Feedback
+        slideImages={[
+          "https://picsum.photos/1000",
+          "https://picsum.photos/800",
+          "https://picsum.photos/900",
+          "https://picsum.photos/1000",
+          "https://picsum.photos/800",
+          "https://picsum.photos/900",
+          "https://picsum.photos/1000",
+          "https://picsum.photos/800",
+          "https://picsum.photos/900",
+        ]}
+      />
+      <Footer />
     </div>
   );
 }
