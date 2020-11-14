@@ -16,7 +16,7 @@ Slideshow.defaultProps = {
 
 const useStyles = makeStyles(() => ({
   image: {
-    height: "250px",
+    height: "20vw",
     margin: "0px 3px",
   },
 }));
@@ -26,10 +26,10 @@ function Slideshow(props) {
   // eslint-disable-next-line react/prop-types
   const { slideImages } = props;
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3000,
     speed: 2000,
     slidesToShow: 3,
     arrows: false,
@@ -56,10 +56,6 @@ function Slideshow(props) {
       {slideImages?.map((item, index) => {
         return (
           <div key={index}>
-            {/* <div
-              className={classes.image}
-              style={{ backgroundImage: `url(${item})` }}
-            ></div> */}
             <img src={item} className={classes.image} />
           </div>
         );

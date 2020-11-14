@@ -18,9 +18,7 @@ const useStyles = makeStyles(() => ({
   title: {
     textAlign: "center",
   },
-  slideshow: {
-    paddingBottom: "2%"
-  }
+
 }));
 
 function Feedback(props) {
@@ -32,7 +30,7 @@ function Feedback(props) {
       <Grid xs className={classes.title} item>
         <Title />
       </Grid>
-      <Grid xs={9} item className={classes.slideshow}>
+      <Grid xs={9} item>
         <Slideshow slideImages={slideImages} />
       </Grid>
     </Grid>
