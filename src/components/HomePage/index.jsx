@@ -9,6 +9,7 @@ import ListCard from "../UI_Kits/ListCard";
 import Feedback from "./Feedback";
 import Footer from "../Footer";
 import Trending from "./Trending";
+import ListBestSale from "./ListBestSale";
 
 export default function HomePage() {
   return (
@@ -91,9 +92,30 @@ export default function HomePage() {
         ]}
       />
       <Trending />
-      SẢN PHẨM BÁN CHẠY
-      <ListCard
+      <ListBestSale
         listProducts={[
+          {
+            image: "https://cf.shopee.vn/file/228542d03f01ddbf605910a351d7695f",
+            name: "Hoodie",
+            price: "18.000₫",
+          },
+          {
+            name: "Pull",
+            price: "30.000₫",
+          },
+          {
+            name: "Pull",
+            price: "40.000₫",
+          },
+          {
+            image: "https://cf.shopee.vn/file/228542d03f01ddbf605910a351d7695f",
+            name: "Hoodie",
+            price: "150.000₫",
+          },
+          {
+            name: "Pull",
+            price: "70.000₫",
+          },
           {
             image: "https://cf.shopee.vn/file/228542d03f01ddbf605910a351d7695f",
             name: "Hoodie",
