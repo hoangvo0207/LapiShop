@@ -3,14 +3,14 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import Routes from "./routes/index";
 import "./App.css";
-import Menu from "./components/Menu";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Menu />
+        <Header />
         <Routes />
         <Footer />
       </div>
