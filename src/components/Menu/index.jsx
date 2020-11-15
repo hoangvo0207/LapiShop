@@ -1,22 +1,21 @@
 import React from "react";
-import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
+
+import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
     width: "100%",
-    // backgroundColor: theme.palette.background.paper,
     boxShadow: "none",
-    // backgroundColor: '#1890ff',
   },
 }));
 
-export default function DisabledTabs() {
+export default function Menu() {
   const classes = useStyles();
-  const labels = ["Item1", "Item2", "Item3"];
+  const labels = ["Trang chủ ", "Tất cả sản phẩm", "Áo", "Quần"];
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
