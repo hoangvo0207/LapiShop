@@ -1,6 +1,5 @@
 import React from "react";
 
-import Menu from "../Menu";
 import Category from "./Category";
 import Slideshow from "./Slideshow";
 
@@ -14,7 +13,6 @@ import ListBestSale from "./ListBestSale";
 export default function HomePage() {
   return (
     <div className="HomePage">
-      {/* <Menu /> */}
       <Slideshow
         slideImages={[
           "https://cf.shopee.vn/file/9092080633f0f01912e06a8e505ecd51",
@@ -153,7 +151,6 @@ export default function HomePage() {
           "https://picsum.photos/900",
         ]}
       />
-      {/* <Footer /> */}
     </div>
   );
 }
