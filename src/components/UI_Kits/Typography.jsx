@@ -6,7 +6,10 @@ const useStyles = makeStyles(() => ({
     fontSize: props => props.fontSize,
     lineHeight: props => props.lineHeight,
     fontWeight: props => props.fontWeight,
-    textTransform: props => props.textTransform, 
+    textTransform: props => props.textTransform,
+    textAlign: props => props.textAlign,
+    color: props => props.color,
+    padding: props => props.padding
   },
 }));
 
