@@ -9,17 +9,17 @@ const useStyles = makeStyles({
   },
   titleTypography: {
     fontWeight: "900",
-    fontSize: "44px",
+    fontSize: "40px",
     marginBottom: "15px",
   },
   description: {
     color: "#777777",
-    fontSize: "18px",
+    fontSize: "16px",
   },
   hotTypography: {
     fontWeight: "900",
     color: "#F2F2F2",
-    fontSize: "200px",
+    fontSize: "180px",
     margin: "0"
   },
   ["@media (max-width: 768px)"]: {
