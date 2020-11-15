@@ -1,45 +1,68 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import ConfirmationNumberIcon from "@material-ui/icons/ConfirmationNumber";
+import EmailIcon from "@material-ui/icons/Email";
 import ErrorIcon from "@material-ui/icons/Error";
+import LockIcon from "@material-ui/icons/Lock";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-import EmailIcon from '@material-ui/icons/Email';
-import LockIcon from '@material-ui/icons/Lock';
-import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Banner from "../UI_Kits/Banner.jsx";
 import ButtonSubmit from "../UI_Kits/ButtonSubmit";
 import Input from "../UI_Kits/Input";
-import Logo from '../UI_Kits/Logo';
+import Logo from "../UI_Kits/Logo";
 
-const useStyles = makeStyles((theme) => ({
-  paper: {
+const useStyles = makeStyles(theme => ({
+  root: {
+    height: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  container: {
     display: "flex",
     flexDirection: "column",
+    height: "100%",
+    width: "100%"
+  },
+  content: {
+    display: "flex",
+    flexDirection: "column",
+    flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    boxShadow: "0 2px 10px 2px #ececec",
-    padding: theme.spacing(0, 8, 0, 8),
-    backgroundColor: "#fff",
-    height: "100vh"
+    margin: theme.spacing(8, 4)
   },
-  typography: {
-    margin: theme.spacing(3),
+  username: {
+    width: 350,
+    marginTop: theme.spacing(2)
+  },
+  password: {
+    width: 350,
+    marginTop: theme.spacing(2)
+  },
+  button: {
+    width: "100%",
+    minHeight: theme.spacing(5),
+    marginTop: theme.spacing(1)
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2)
+  },
+  h5: {
     textAlign: "center",
-    fontWeight: "600",
+    fontWeight: 600,
+    marginTop: 20,
     color: "#8e8e8e"
-  },
-  containerGrid: {
-    margin: theme.spacing(0, 0, 4, 0),
   },
   link: {
     color: "#3578b7",
+    marginTop: 10
   }
 }));
 
@@ -51,16 +74,16 @@ export default function SignUp(props) {
     password: "",
     confirmPassword: "",
     showPassword: false,
-    checkConfirmPassword: false,
+    checkConfirmPassword: false
   });
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     const name = event.target.name;
     const value = event.target.value;
 
     setValues({
       ...values,
-      [name]: value,
+      [name]: value
     });
 
     if (name === "confirmPassword") {
@@ -73,84 +96,84 @@ export default function SignUp(props) {
   };
 
   return (
-    <Container component="main" maxWidth="sm">
-      <div className={classes.paper}>
-        <Logo />
-        <Typography component="h1" variant="h5" className={classes.typography}>
-          Tạo tài khoản ngay, mua sắm liền tay
-        </Typography>
-        <Grid container spacing={2} className={classes.containerGrid}>
-          <Grid item xs={12}>
-            <Input
-              name="email"
-              type="text"
-              value={values.email}
-              onChange={handleChange}
-              label="Email"
-              error={null}
-              startAdornment={<EmailIcon color="primary"/>}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <Input
-              name="password"
-              type={values.showPassword ? "text" : "password"}
-              value={values.password}
-              onChange={handleChange}
-              label="Password"
-              error={null}
-              startAdornment={<LockIcon color="primary"/>}
-              endAdornment={
-                <IconButton onClick={handleClickShowPassword}>
-                  {values.showPassword ? <Visibility /> : <VisibilityOff />}
-                </IconButton>
-              }
-            ></Input>
-          </Grid>
-          <Grid item xs={12}>
-            <Input
-              name="confirmPassword"
-              type="password"
-              value={values.confirmPassword}
-              onChange={handleChange}
-              label="Confirm Password"
-              error={
-                values.confirmPassword === "" ? null : !checkConfirmPassword
-              }
-              startAdornment={<ConfirmationNumberIcon color="primary"/>}
-              endAdornment={
-                values.confirmPassword === "" ? null : !checkConfirmPassword ? (
-                  <ErrorIcon color="error" />
-                ) : (
-                  <CheckCircleIcon color="primary" />
-                )
-              }
-            ></Input>
-          </Grid>
-          <Grid item xs={12}>
-            <ButtonSubmit
-              name="Sign Up"
-              disabled={
-                !(
-                  values.email !== "" &&
-                  values.password !== "" &&
-                  values.confirmPassword !== "" &&
-                  checkConfirmPassword
-                )
-              }
-            />
-          </Grid>
-        </Grid>
+    <Container className={classes.root}>
+      <Banner />
 
-        <Grid container justify="center" className={classes.containerGrid}>
-          <Grid item>
-            <Link to="/SignIn" className={classes.link}>
-              Already have an account? Sign in
-            </Link>
-          </Grid>
-        </Grid>
-      </div>
+      <Grid item container alignItems="center" xs={12} sm={6} md={5} lg={4}>
+        <div className={classes.container}>
+          <div className={classes.content}>
+            <Logo />
+
+            <React.Fragment>
+              <Typography component="h1" variant="h5" className={classes.h5}>
+                Tạo tài khoản ngay! <br />
+                Mua sắm liền tay!
+              </Typography>
+
+              <Input
+                name="email"
+                type="text"
+                value={values.email}
+                onChange={handleChange}
+                label="Email"
+                error={null}
+                startAdornment={<EmailIcon color="primary" />}
+              />
+
+              <Input
+                name="password"
+                type={values.showPassword ? "text" : "password"}
+                value={values.password}
+                onChange={handleChange}
+                label="Password"
+                error={null}
+                startAdornment={<LockIcon color="primary" />}
+                endAdornment={
+                  <IconButton onClick={handleClickShowPassword}>
+                    {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                }
+              ></Input>
+
+              <Input
+                name="confirmPassword"
+                type="password"
+                value={values.confirmPassword}
+                onChange={handleChange}
+                label="Confirm Password"
+                error={
+                  values.confirmPassword === "" ? null : !checkConfirmPassword
+                }
+                startAdornment={<ConfirmationNumberIcon color="primary" />}
+                endAdornment={
+                  values.confirmPassword ===
+                  "" ? null : !checkConfirmPassword ? (
+                    <ErrorIcon color="error" />
+                  ) : (
+                    <CheckCircleIcon color="primary" />
+                  )
+                }
+              ></Input>
+
+              <ButtonSubmit
+                name="Sign Up"
+                disabled={
+                  !(
+                    values.email !== "" &&
+                    values.password !== "" &&
+                    values.confirmPassword !== "" &&
+                    checkConfirmPassword
+                  )
+                }
+              />
+
+              <Link href="/SignIn" className={classes.link}>
+                Already have an account? Sign in
+              </Link>
+            </React.Fragment>
+          </div>
+        </div>
+      </Grid>
     </Container>
-
   );
 }
