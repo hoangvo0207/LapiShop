@@ -2,9 +2,6 @@ import { Divider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import CardList from "../CardList/index.jsx";
-import FooterDetail from "../FooterDetail/index.jsx";
-import Header from "../Header/index.jsx";
-import Menu from "../Menu/index.jsx";
 
 const useStyles = makeStyles(() => ({
   image: {
@@ -29,12 +26,6 @@ const DetailPage = props => {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Header />
-
-      <Divider style={{ marginTop: 20 }} />
-
-      <Menu />
-
       <div className={classes.image}>
         <div className={classes.text}>Search results for: </div>
       </div>
@@ -46,8 +37,6 @@ const DetailPage = props => {
       <CardList />
 
       <Divider style={{ marginTop: 50 }} />
-
-      <FooterDetail />
     </React.Fragment>
   );
 };
