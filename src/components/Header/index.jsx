@@ -17,8 +17,8 @@ const useStyles = makeStyles(() => ({
     padding: "0px 20px",
     alignItems: "center",
     justifyContent: "space-between",
-    boxShadow: "0 1px 3px rgba(0,0,0,.1)",
-  },
+    boxShadow: "0 1px 3px rgba(0,0,0,.1)"
+  }
 }));
 
 export default function Header() {

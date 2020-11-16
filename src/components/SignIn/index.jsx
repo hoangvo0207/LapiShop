@@ -1,20 +1,18 @@
-import React, { useState } from "react";
-
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
+import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import EmailIcon from "@material-ui/icons/Email";
 import LockIcon from "@material-ui/icons/Lock";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-
-import Banner from "../UI_Kits/Banner"
+import React, { useState } from "react";
+import Banner from "../UI_Kits/Banner";
 import ButtonSubmit from "../UI_Kits/ButtonSubmit.jsx";
-import Logo from "../UI_Kits/Logo.jsx";
 import Input from "../UI_Kits/Input.jsx";
-import { Link } from "@material-ui/core";
+import Logo from "../UI_Kits/Logo.jsx";
 
 const useStyles = makeStyles(theme => ({
   root: {
