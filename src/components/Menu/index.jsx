@@ -4,19 +4,32 @@ import Paper from "@material-ui/core/Paper";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
     width: "100%",
-    // backgroundColor: theme.palette.background.paper,
-    boxShadow: "none",
-    // backgroundColor: '#1890ff',
+    boxShadow: "none"
   },
+  text: {
+    color: "#2d2a2a",
+    fontWeight: 1500
+  },
+  indicator: {
+    color: "primary"
+  }
 }));
 
 export default function DisabledTabs() {
   const classes = useStyles();
-  const labels = ["Item1", "Item2", "Item3"];
+  const labels = [
+    "TRANG CHỦ",
+    "SHOP ALL",
+    "ÁO",
+    "QUẦN",
+    "PHỤ KIỆN",
+    "CLEARANCE SALES",
+    "MEMBERSHIP"
+  ];
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -28,11 +41,11 @@ export default function DisabledTabs() {
       <Tabs
         value={value}
         indicatorColor="primary"
-        textColor="primary"
+        textColor={classes.text}
         onChange={handleChange}
         centered
       >
-        {labels.map((label) => (
+        {labels.map(label => (
           <Tab label={label} />
         ))}
       </Tabs>
