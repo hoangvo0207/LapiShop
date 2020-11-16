@@ -1,45 +1,36 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
-import lapi from "../../assets/lapi.png";
-import SearchBar from "../SearchBar/index.jsx";
 
-const useStyles = makeStyles(theme => ({
+import { makeStyles } from "@material-ui/core/styles";
+import { Badge } from "@material-ui/core";
+import LocalMallOutlinedIcon from "@material-ui/icons/LocalMallOutlined";
+
+import Menu from "./Menu";
+import InputSearch from "./InputSearch";
+
+const useStyles = makeStyles(() => ({
   root: {
-    flexGrow: 1
-  },
-  lapi: {
-    padding: theme.spacing(0),
-    textAlign: "center",
-    height: 150,
-    marginTop: 20,
-    marginLeft: 20,
-    marginRight: 10
-  },
-  search: {
-    marginLeft: -70,
-    marginTop: 30
-  },
-  contact: {}
+    position: "sticky",
+    top: 0,
+    backgroundColor: "#FFF",
+    zIndex: "9999",
+    display: "flex",
+    padding: "0px 20px",
+    alignItems: "center",
+    justifyContent: "space-between",
+    boxShadow: "0 1px 3px rgba(0,0,0,.1)"
+  }
 }));
 
-const Detail = props => {
+export default function Header() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={1}>
-        <Grid item xs={3}>
-          <img className={classes.lapi} src={lapi} alt="lapi" />
-        </Grid>
-        <Grid item xs={7} className={classes.search}>
-          <SearchBar />
-        </Grid>
-        <Grid item xs={2}></Grid>
-      </Grid>
+      <Menu />
+      <InputSearch />
+      <Badge badgeContent={0} color="primary" showZero>
+        <LocalMallOutlinedIcon />
+      </Badge>
     </div>
   );
-};
-
-export default Detail;
+}
